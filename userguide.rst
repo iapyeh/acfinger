@@ -16,13 +16,15 @@ Stress
 
 This is a diagram of keypress count by left and right fingers.
 
-+----------+
-|\ |IMG1|\ |
-+----------+
++-------------------------------------------------------------------------------------------------------------------------------+
+|\ |IMG1|\                                                                                                                      |
+|                                                                                                                               |
+|This diagram reads:                                                                                                            |
+|                                                                                                                               |
+|At 13:43, your left fingers has pressed keyboard for 6,568 times.  And your right fingers has pressed keyboard for 8,469 times.|
++-------------------------------------------------------------------------------------------------------------------------------+
 
-This diagram reads:
-
-At 13:43, your left fingers has pressed keyboard for 6,568 times.  And your right fingers has pressed keyboard for 8,469 times.
+--------
 
 
 +----------+
