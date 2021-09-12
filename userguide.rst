@@ -35,7 +35,7 @@ In number of 6,568 keypress by your left fingers, litter finger(L5) counts 853, 
 
 In number of 8,496 keypress by your left fingers, thumb(R1) counts 1,420, forefinger(R2) counts 3,193, middle finger(R3) counts 794, ring finger(R4) counts 1,091 and little finger(R5) counts 1,998.
 
-Your left middle finger and right forefinger are mostly hard-working fingers.
+From 0:00 till 13:43,your left middle finger and right forefinger are mostly hard-working fingers.
 
 .. _h7a52723643d19301d26a256052e75:
 
