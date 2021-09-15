@@ -51,21 +51,18 @@ But for this diagram below:
 
 This reads that you start typing on your computer around AM8:00, and you are very hard working, almost without any break till 12:00. Maybe you are in an unusually emergent state or you have to adjust working-behavior for better health.
 
-.. _h7a52723643d19301d26a256052e75:
+.. _h67588282f612229e44437f7063305:
 
-Blance
-======
-
-
-|REPLACE1|
+Balance
+=======
 
 This tab shows your balance of working and break. 
 
 \ |IMG5|\ 
 
-There are three colors in the diagram. Green color is accumulation of break time in minutes. Blue color area is accumulation of working time. Dark blue is accumulation  of overworking time.
+This diagram reads:  from AM 7:25 to 21:41, you spent 7 hours and 20 minutes on working, 6 hours and 56 minutes on break. In your working time, 38% (aka 2 hours and 49 minutes is overworking).
 
-The bar under bottom shows tempo of break/working/overworking.
+Below the chart, a color bar shows your break/working/overworking tempo. Green section means break interval, blue section for working interval and deep blue section for overworking interval.
 
 .. _h234f20346f3f70460477d1f5d2e7b22:
 
@@ -75,10 +72,6 @@ Power
 
 .. bottom of content
 
-
-.. |REPLACE1| raw:: html
-
-    <a name="tabBalance"></a>
 .. |IMG1| image:: static/User_Guide_1.png
    :height: 264 px
    :width: 377 px
@@ -96,5 +89,5 @@ Power
    :width: 349 px
 
 .. |IMG5| image:: static/User_Guide_5.png
-   :height: 246 px
-   :width: 376 px
+   :height: 326 px
+   :width: 396 px
