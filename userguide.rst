@@ -39,12 +39,7 @@ From 0:00 till 13:43,your left middle finger and right forefinger are mostly har
 
 
 
-.. _h3512151d637265664639300516351:
-
-You can read more information from this kind of diagram. For example:
-=====================================================================
-
-A casual day would be like this below. It has smooth lines.
+You can read more information from this kind of diagram. For example: A casual day would be like this below. It has smooth lines.
 
 \ |IMG3|\ 
 
@@ -54,12 +49,23 @@ But for this diagram below:
 
 \ |IMG4|\ ==========
 
-This reads that you start to typing on your computer around AM8:00, and you are very hard working, almost without any break till 12:00. Maybe you are in an unusually emergent state or you have to adjust working-behavior for better health.
+This reads that you start typing on your computer around AM8:00, and you are very hard working, almost without any break till 12:00. Maybe you are in an unusually emergent state or you have to adjust working-behavior for better health.
 
 .. _h7a52723643d19301d26a256052e75:
 
 Blance
 ======
+
+
+|REPLACE1|
+
+This tab shows your balance of working and break. 
+
+\ |IMG5|\ 
+
+There are three colors in the diagram. Green color is accumulation of break time in minutes. Blue color area is accumulation of working time. Dark blue is accumulation  of overworking time.
+
+The bar under bottom shows tempo of break/working/overworking.
 
 .. _h234f20346f3f70460477d1f5d2e7b22:
 
@@ -69,6 +75,10 @@ Power
 
 .. bottom of content
 
+
+.. |REPLACE1| raw:: html
+
+    <a name="tabBlance"/>
 .. |IMG1| image:: static/User_Guide_1.png
    :height: 264 px
    :width: 377 px
@@ -84,3 +94,7 @@ Power
 .. |IMG4| image:: static/User_Guide_4.png
    :height: 234 px
    :width: 349 px
+
+.. |IMG5| image:: static/User_Guide_5.png
+   :height: 246 px
+   :width: 376 px
