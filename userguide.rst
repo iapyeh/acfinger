@@ -78,7 +78,7 @@ Power
 
 .. |REPLACE1| raw:: html
 
-    <a name="tabBlance"/>
+    <a name="tabBalance"></a>
 .. |IMG1| image:: static/User_Guide_1.png
    :height: 264 px
    :width: 377 px
