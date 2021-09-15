@@ -21,7 +21,7 @@ Working Minute and Break Minute
 
 \ |IMG1|\ 
 
-The Typing Counter counts a minute as a working minute or a break minute by a threshold value (default to 5 keypresses).  For a minute with typing count over the threshold value, it is a working minute. 
+The Typing Counter takes a minute as a working minute or a break minute by a threshold value (default to 5 keypresses).  For a minute with keypress count over the threshold value, it is a working minute. Otherwise it is a break minute.
 
 .. _h372630646e56301561a1a371134181b:
 
@@ -30,7 +30,7 @@ Break Interval
 
 \ |IMG2|\ 
 
-The Typing Counter counts continuous break minutes as a break interval only if its length is more than the threshold value (default to 10 minutes). If its length is less than the threshold value, those minutes count as working minutes. This is for encourage users to take enough break.
+The Typing Counter takes continuous break minutes as a break interval only if its length is more than a threshold value (default to 10 minutes). If its length is less than the threshold value, it is also taken as a working interval. This is for encouraging you to take enough break time.
 
 .. _h7d27c1759465b14283e39615c302058:
 
@@ -39,7 +39,7 @@ Overworking Interval
 
 \ |IMG3|\ 
 
-The Typing Counter checks continuous working interval. If its length is more than the threshold value (default to 50 minutes), it counts those exceeding time as overworking interval. 
+The Typing Counter checks length of every continuous working interval. If its length is more than a threshold value (default to 50 minutes), it takes those exceeding time as overworking interval. 
 
 .. _h286272113e3f7c2f29363693b2f42:
 
@@ -48,15 +48,15 @@ Power Calculation
 
 \ |IMG4|\ 
 
-Human body is like a battery. It looses power during working and restores power back with break. The body power of the Typing Counter is a score from 0 to 100. At day beginning, the power is set to 100 scores. Power is reduced in working intervals and is increased in break intervals. There is a expenditure value (defaults to 80) associates with the mininum working interval (defaults to 50), which means 50 minutes of working spend 80 scores of power. 
+Human body is like a battery. It looses power during working interval and restores power back by taking break. The body power of the Typing Counter is a score from 0% to 100%. At day beginning, power is set to 100%. Power is reduced as long as working. Power is restored in break intervals. There is an expenditure value (defaults to 80%) associates with the mininum working interval (defaults to 50 minutes), which defines the reducing rate (50 minutes of working spent 80% power) 
 
 \ |IMG5|\ 
 
-The reducing rate is 1.6 scores per working minutes. If the user is still working, the power score reduces to zero after 12.5 minutes.
+The default reducing rate is 1.6% per working minute. If you are overworking, the power score would reduce to zero after 12.5 minutes.
 
 \ |IMG6|\ 
 
-The charging rate is 8 scores per break minutes. If the user takes a break, the power score would be restored to 100 after 10 minutes.
+The default charging rate is 8% per break minute. If you take a break, the power score would be restored to 100% after 10 minutes.
 
 .. _h7015777b347a33c5e481931d625040:
 
@@ -133,24 +133,24 @@ Human body is like a battery. It looses power during working and restores power 
    :width: 420 px
 
 .. |IMG2| image:: static/User_Guide_2.png
-   :height: 169 px
-   :width: 532 px
+   :height: 182 px
+   :width: 569 px
 
 .. |IMG3| image:: static/User_Guide_3.png
    :height: 112 px
    :width: 520 px
 
 .. |IMG4| image:: static/User_Guide_4.png
-   :height: 174 px
-   :width: 552 px
+   :height: 226 px
+   :width: 572 px
 
 .. |IMG5| image:: static/User_Guide_5.png
-   :height: 162 px
-   :width: 529 px
+   :height: 173 px
+   :width: 609 px
 
 .. |IMG6| image:: static/User_Guide_6.png
-   :height: 189 px
-   :width: 594 px
+   :height: 186 px
+   :width: 605 px
 
 .. |IMG7| image:: static/User_Guide_7.png
    :height: 264 px
