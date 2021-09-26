@@ -112,18 +112,147 @@ Balance
 
 This tab shows your balance of working and break. 
 
-\ |IMG11|\ 	
+\ |IMG11|\ 
 
-This diagram reads:  from 7:25 to 21:41, you spent 7 hours and 20 minutes for working, 6 hours and 56 minutes for break. In all of working time, 38% (aka 2 hours and 49 minutes is overworking).
+This diagram reads:  from 7:48 to 22:46, you spent 9 hours and 34 minutes for working, 5 hours and 24 minutes for break. In all of working time, 49% (aka 4 hours and 41 minutes) is overworking. It's not good.
 
-Below the chart, a color bar shows break/working/overworking tempo. Green section is break interval, blue section is working interval and deep blue section is  overworking interval.
+Below the chart, a color bar shows break/working/overworking tempo. Green section is break interval, blue section is working interval and dark blue section is  overworking interval.
 
 \ |IMG12|\ 
+
+At the lower part is a percentage comparison of working and break interval in total, aka "9hr 34m" vs. "5hr 24m". This diagram shows that you spent 64% for working and 36% for breaks from 07:48 to 22:46.
+
+\ |IMG13|\ 
 
 .. _h234f20346f3f70460477d1f5d2e7b22:
 
 Power
 =====
+
+.. _h175e5034f3d2b2d704737456d2e7562:
+
+Data Format
+***********
+
+.. _h1f544f2c4950c11396e127c3e292e3b:
+
+Simple Format
+=============
+
+For every raw of a single file. Below is meaning for every column
+
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|Column|Meaning                                                                                                                          |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|0     |Timestamp                                                                                                                        |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|1     |counts of unset (ignored) keys.                                                                                                  |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|2     |counts of left hand little finger (L5)                                                                                           |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|3     |counts of left hand ring finger (L4)                                                                                             |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|4     |counts of left hand middle finger (L3)                                                                                           |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|5     |counts of left hand index finger / forefinger (L2)                                                                               |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|6     |counts of left hand thumb (L1)                                                                                                   |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|7     |counts of right hand thumb (R1)                                                                                                  |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|8     |counts of right hand index finger / forefinger (R2)                                                                              |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|9     |counts of right hand middle finger (R3)                                                                                          |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|10    |counts of right hand ring finger (R4)                                                                                            |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|11    |counts of right hand little finger (R5)                                                                                          |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|12    |duration of unset keys (L5)                                                                                                      |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|13    |duration of left hand little finger (L5)                                                                                         |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|14    |duration of left hand ring finger (L4)                                                                                           |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|15    |duration of left hand middle finger (L3)                                                                                         |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|16    |duration of left hand index finger / forefinger (L2)                                                                             |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|17    |duration of left hand thumb (L1)                                                                                                 |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|18    |duration of right hand thumb (R1)                                                                                                |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|19    |duration of right hand index finger / forefinger (R2)                                                                            |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|20    |duration of right hand middle finger (R3)                                                                                        |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|21    |duration of right hand ring finger (R4)                                                                                          |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|22    |duration of right hand little finger (R5)                                                                                        |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|23    |counts of left mouse button                                                                                                      |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|24    |counts of middle mouse button                                                                                                    |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|25    |counts of right mouse button                                                                                                     |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|26    |counts of composite keys (shift, control,...)                                                                                    |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+|27    |counts of hand moving from keyboard to mouse. (beliving this is very close to the counts of hand moving from mouse to keyboard). |
++------+---------------------------------------------------------------------------------------------------------------------------------+
+
+Remarks:
+
+#. "Empty String" value is 0.
+
+#. If both "left mouse click" and "right mouse click" are mapping to "unset" . The field 27 is always 0.
+
+.. _h7d4c3277791e387f322d4d676f136037:
+
+Academic Format
+===============
+
+This format adds extra 14 fields for researches on Keystroke Dynamic.
+
+\ |IMG14|\ 
+
++--+------------------------------------------------------------------------------+
+|28|Arithematic mean of  PP                                                       |
++--+------------------------------------------------------------------------------+
+|29|Arithematic mean of  PR                                                       |
++--+------------------------------------------------------------------------------+
+|30|Arithematic mean of  RP                                                       |
++--+------------------------------------------------------------------------------+
+|31|Arithematic mean of  RR                                                       |
++--+------------------------------------------------------------------------------+
+|32|Geometric mean of PP                                                          |
++--+------------------------------------------------------------------------------+
+|33|Geometric mean of  PR                                                         |
++--+------------------------------------------------------------------------------+
+|34|Geometric mean of  RP                                                         |
++--+------------------------------------------------------------------------------+
+|35|Geometric mean of  RR                                                         |
++--+------------------------------------------------------------------------------+
+|36|Harmonic mean of  PR                                                          |
++--+------------------------------------------------------------------------------+
+|37|Harmonic mean of  PR                                                          |
++--+------------------------------------------------------------------------------+
+|38|Harmonic mean of  RP                                                          |
++--+------------------------------------------------------------------------------+
+|39|Harmonic mean of  RR                                                          |
++--+------------------------------------------------------------------------------+
+|40|Sample size of PP, the number for calculating mean of PP (RP, RR are the same)|
++--+------------------------------------------------------------------------------+
+|41|Sample size of PR, the number for calculating mean of PR                      |
++--+------------------------------------------------------------------------------+
+
+Remarks:
+
+#. Field 28-39 are calculated by the same kind of keystrokes in a minute.
+
+#. Special keys (mostly are composite keys), such as Shft, Control, Caplock, Command, Option/Alt are excluded from statistics.
+
+#. Mouse clicks are excluded, too.
 
 
 .. bottom of content
@@ -161,17 +290,25 @@ Power
    :width: 341 px
 
 .. |IMG9| image:: static/User_Guide_9.png
-   :height: 226 px
-   :width: 344 px
-
-.. |IMG10| image:: static/User_Guide_10.png
-   :height: 234 px
-   :width: 349 px
-
-.. |IMG11| image:: static/User_Guide_11.png
-   :height: 350 px
+   :height: 282 px
    :width: 428 px
 
+.. |IMG10| image:: static/User_Guide_10.png
+   :height: 284 px
+   :width: 424 px
+
+.. |IMG11| image:: static/User_Guide_11.png
+   :height: 357 px
+   :width: 413 px
+
 .. |IMG12| image:: static/User_Guide_12.png
-   :height: 98 px
+   :height: 120 px
    :width: 425 px
+
+.. |IMG13| image:: static/User_Guide_13.png
+   :height: 357 px
+   :width: 405 px
+
+.. |IMG14| image:: static/User_Guide_14.png
+   :height: 302 px
+   :width: 652 px
