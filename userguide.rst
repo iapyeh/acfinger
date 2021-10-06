@@ -274,19 +274,22 @@ Remarks:
 
 #. Because users might press next key before releasing the already pressed key, the sequence of key pressing and releasing could be press-press-release-release instead of press-release-press-release. It can be can be observed from Field 40-43. Usually, PR, RP and RR are of the same number, when it happened, RR would has different number from PP and RP. When it happened, these values are measured as blow:\ |IMG15|\ 
 
+.. _h5d7c2a76c4117189136d597c674825:
+
 Visualization Key-Finger Mappings
+=================================
 
 \ |IMG16|\ 
+
+\ |IMG17|\ 
+
+\ |IMG18|\ 
 
 #. Copy the raw data into clipboard.
 
 #. Open browser to the Keyboard Layout Editor(KLE)
 
-\ |IMG17|\ 
-
 #. In KLE, from the menuitem "Preset", choose "Blank Layout" 
-
-\ |IMG18|\ 
 
 #. Paste the raw data into the blank textarea blow the tab "Raw data".
 
