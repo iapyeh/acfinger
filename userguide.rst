@@ -4,6 +4,8 @@
 User Guide
 ##########
 
+Health is simply belance between working and taking break. This app is mainly for office workers who are sitting on computer all day long. This app help them to be aware of their own working and break tempo. By managing balance, they are able to keep healthy and productive for their careers.
+
 .. _h24263c4b755f1b4e49342c321267514d:
 
 Synopsis
@@ -134,6 +136,8 @@ Power
 Data Format
 ***********
 
+Data is generated every minute an entry (row). Usually, recorded values are written in next minute. If the computer goes to sleep, recording duration is less than 1 minute but entry's timestamp is the time before sleeping, though that entry is written after computer has waken up.
+
 .. _h1f544f2c4950c11396e127c3e292e3b:
 
 Simple Format
@@ -144,7 +148,7 @@ For every raw of a single file. Below is meaning for every column
 +------+---------------------------------------------------------------------------------------------------------------------------------+
 |Column|Meaning                                                                                                                          |
 +------+---------------------------------------------------------------------------------------------------------------------------------+
-|0     |Timestamp                                                                                                                        |
+|0     |Timestamp, this is the time of recording start.                                                                                  |
 +------+---------------------------------------------------------------------------------------------------------------------------------+
 |1     |counts of unset (ignored) keys.                                                                                                  |
 +------+---------------------------------------------------------------------------------------------------------------------------------+
@@ -212,39 +216,53 @@ Remarks:
 Academic Format
 ===============
 
-This format adds extra 14 fields for researches on Keystroke Dynamic.
+Since (part of) Keystroke Dynamic Studies are focusing on working fatigue recognition, we decide to support the academic format for helping on improving public health.
+
+This format adds extra 25 fields for researches on Keystroke Dynamic. They are measured by the theoratical model below:
 
 \ |IMG14|\ 
 
-+--+------------------------------------------------------------------------------+
-|28|Arithematic mean of  PP                                                       |
-+--+------------------------------------------------------------------------------+
-|29|Arithematic mean of  PR                                                       |
-+--+------------------------------------------------------------------------------+
-|30|Arithematic mean of  RP                                                       |
-+--+------------------------------------------------------------------------------+
-|31|Arithematic mean of  RR                                                       |
-+--+------------------------------------------------------------------------------+
-|32|Geometric mean of PP                                                          |
-+--+------------------------------------------------------------------------------+
-|33|Geometric mean of  PR                                                         |
-+--+------------------------------------------------------------------------------+
-|34|Geometric mean of  RP                                                         |
-+--+------------------------------------------------------------------------------+
-|35|Geometric mean of  RR                                                         |
-+--+------------------------------------------------------------------------------+
-|36|Harmonic mean of  PR                                                          |
-+--+------------------------------------------------------------------------------+
-|37|Harmonic mean of  PR                                                          |
-+--+------------------------------------------------------------------------------+
-|38|Harmonic mean of  RP                                                          |
-+--+------------------------------------------------------------------------------+
-|39|Harmonic mean of  RR                                                          |
-+--+------------------------------------------------------------------------------+
-|40|Sample size of PP, the number for calculating mean of PP (RP, RR are the same)|
-+--+------------------------------------------------------------------------------+
-|41|Sample size of PR, the number for calculating mean of PR                      |
-+--+------------------------------------------------------------------------------+
++--+-----------------------+
+|28|Arithematic mean of  PH|
++--+-----------------------+
+|29|Arithematic mean of  PP|
++--+-----------------------+
+|30|Arithematic mean of  PR|
++--+-----------------------+
+|31|Arithematic mean of  RP|
++--+-----------------------+
+|32|Arithematic mean of  RR|
++--+-----------------------+
+|33|Geometric mean of  PH  |
++--+-----------------------+
+|34|Geometric mean of  PP  |
++--+-----------------------+
+|35|Geometric mean of  PR  |
++--+-----------------------+
+|36|Geometric mean of  RP  |
++--+-----------------------+
+|37|Geometric mean of  RR  |
++--+-----------------------+
+|38|Harmonic mean of  PH   |
++--+-----------------------+
+|39|Harmonic mean of  PP   |
++--+-----------------------+
+|40|Harmonic mean of  PR   |
++--+-----------------------+
+|41|Harmonic mean of  RP   |
++--+-----------------------+
+|42|Harmonic mean of  RR   |
++--+-----------------------+
+|43|Sample size of PH      |
++--+-----------------------+
+|44|Sample size of PP      |
++--+-----------------------+
+|45|Sample size of PR      |
++--+-----------------------+
+|46|Sample size of RP      |
++--+-----------------------+
+|47|Sample size of RR      |
++--+-----------------------+
 
 Remarks:
 
@@ -254,6 +272,24 @@ Remarks:
 
 #. Mouse clicks are excluded, too.
 
+#. Because users might press next key before releasing the already pressed key, the sequence of key pressing and releasing could be press-press-release-release instead of press-release-press-release. It can be can be observed from Field 40-43. Usually, PR, RP and RR are of the same number, when it happened, RR would has different number from PP and RP. When it happened, these values are measured as blow:\ |IMG15|\ 
+
+Visualization Key-Finger Mappings
+
+\ |IMG16|\ 
+
+#. Copy the raw data into clipboard.
+
+#. Open browser to the Keyboard Layout Editor(KLE)
+
+\ |IMG17|\ 
+
+#. In KLE, from the menuitem "Preset", choose "Blank Layout" 
+
+\ |IMG18|\ 
+
+#. Paste the raw data into the blank textarea blow the tab "Raw data".
+
 
 .. bottom of content
 
@@ -262,8 +298,8 @@ Remarks:
    :width: 420 px
 
 .. |IMG2| image:: static/User_Guide_2.png
-   :height: 182 px
-   :width: 569 px
+   :height: 306 px
+   :width: 697 px
 
 .. |IMG3| image:: static/User_Guide_3.png
    :height: 112 px
@@ -310,5 +346,21 @@ Remarks:
    :width: 405 px
 
 .. |IMG14| image:: static/User_Guide_14.png
-   :height: 302 px
-   :width: 652 px
+   :height: 352 px
+   :width: 697 px
+
+.. |IMG15| image:: static/User_Guide_15.png
+   :height: 265 px
+   :width: 568 px
+
+.. |IMG16| image:: static/User_Guide_16.png
+   :height: 292 px
+   :width: 281 px
+
+.. |IMG17| image:: static/User_Guide_17.png
+   :height: 184 px
+   :width: 221 px
+
+.. |IMG18| image:: static/User_Guide_18.png
+   :height: 77 px
+   :width: 222 px
